@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InvalidClassException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
@@ -36,6 +37,8 @@ public class Filbehandling {
 		    	fis.close();
 			}catch (ClassNotFoundException cnf){
 				System.out.println("Fant ikke klassen ved lasting \n " + cnf); gruppe = new Gruppe();
+			}catch (InvalidClassException ice){
+				System.out.println("Endringer siden sist! Ikke kompatibel med gammel brukerdata.\nLager ny brukerdata."); gruppe = new Gruppe();
 			}catch (IOException ioe){
 				System.out.println("Feil ved lasting \n" + ioe);
 			}			

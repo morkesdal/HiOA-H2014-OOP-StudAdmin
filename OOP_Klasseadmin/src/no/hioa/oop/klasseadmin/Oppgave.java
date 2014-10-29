@@ -14,6 +14,9 @@ public class Oppgave implements Serializable{
 	//set og get
 	
 	
+	public boolean isGodkjent(){
+		return true;
+	}
 	
 	
 }
