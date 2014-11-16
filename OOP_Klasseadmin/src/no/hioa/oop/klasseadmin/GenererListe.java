@@ -4,6 +4,10 @@ public class GenererListe {
 
 	//Class GenererListe
 
+	
+	//Denne klassen har blitt mer eller mindre integrert i GUIVisGruppe og GUI Gruppe
+	
+	
 	//sortere kjønn
 	//hvis gutt putt guttegruppe; hvis ikke putt jentegruppe;
 
@@ -22,5 +26,6 @@ public class GenererListe {
 	//legg til i riktig antall grupper
 
 	//skrive ut lista i kommandovinduet og/eller et dialogvindu
+	
 
 }
