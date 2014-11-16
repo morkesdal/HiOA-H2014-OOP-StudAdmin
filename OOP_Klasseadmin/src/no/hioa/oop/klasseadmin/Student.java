@@ -31,12 +31,13 @@ public class Student implements Serializable{
 		
 	}
 	
-	public Student(String forNavn, String etterNavn, int studieStart, boolean kjonnMann, String fagOmrade){
+	public Student(String forNavn, String etterNavn, int studieStart, boolean kjonnMann, String fagOmrade, Vector<Oppgave> oppgaver){
 		this.forNavn = forNavn;
 		this.etterNavn = etterNavn;
 		this.studieStart = studieStart;
 		this.mann = kjonnMann;
 		this.fagOmrade = fagOmrade;
+		this.oppgaver = oppgaver;
 	}
 	
 	public String getForNavn(){
@@ -99,6 +100,10 @@ public class Student implements Serializable{
 		Oppgave[] opg = new Oppgave[oppgaver.size()];
 		oppgaver.toArray(opg);
 		return opg;
+	}
+	
+	public Vector<Oppgave> getOppgaverAsVector(){
+		return oppgaver;
 	}
 	
 	public boolean isGodkjent(){
